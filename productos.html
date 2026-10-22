@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubre los accesorios de Q' Chula y encuentra tus favoritos.">
+  <title>Productos | Q' Chula Accesorios</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/productos.css">
+</head>
+
+<body>
+
+  <!-- NAVEGACIÓN -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand marca-qchula" href="index.html">
+        <span>Q' Chula</span>
+        <small>ACCESORIOS</small>
+      </a>
+
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#menuQChula"
+        aria-controls="menuQChula" aria-expanded="false"
+        aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuQChula">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#colecciones">Colecciones</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#esencia">Nuestra esencia</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#galeria">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="carrito.html">Mi carrito</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ENCABEZADO DEL CATÁLOGO -->
+  <main class="catalogo-pagina">
+    <div class="container">
+
+      <header class="catalogo-encabezado">
+        <p class="catalogo-etiqueta">DETALLES QUE HABLAN DE TI</p>
+        <h1>Nuestra colección</h1>
+        <p>Encuentra accesorios que expresen tu esencia, tu estilo y tu personalidad.</p>
+      </header>
+
+      <!-- FILTROS -->
+      <div class="filtros-catalogo" aria-label="Filtrar productos">
+        <button type="button" class="filtro-btn active" data-filtro="todos" aria-pressed="true">Todos</button>
+        <button type="button" class="filtro-btn" data-filtro="aretes" aria-pressed="false">Aretes</button>
+        <button type="button" class="filtro-btn" data-filtro="collares" aria-pressed="false">Collares</button>
+        <button type="button" class="filtro-btn" data-filtro="pulseras" aria-pressed="false">Pulseras</button>
+        <button type="button" class="filtro-btn" data-filtro="otros" aria-pressed="false">Otros accesorios</button>
+      </div>
+
+      <p class="contador-catalogo" id="contadorProductos" aria-live="polite">12 productos</p>
+
+      <!-- PRODUCTOS -->
+      <div class="row g-4" id="catalogoProductos">
+
+        <div class="col-12 col-sm-6 col-lg-4 producto-catalogo" data-categoria="aretes">
+          <article class="producto-card">
+            <img src="img/pic002.jpeg" alt="Aretes Flora Emerald" loading="lazy">
+            <div class="producto-info">
+              <h2>Aretes Flora Emerald</h2>
+              <p>Un toque floral con un estilo delicado.</p>
+              <span class="producto-precio">$22.000</span>
+              <button type="button" class="btn-qchula" onclick="agregarAlCarrito('Aretes Flora Emerald',22000,'img/pic002.jpeg')">Agregar al carrito</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 producto-catalogo" data-categoria="aretes">
+          <article class="producto-card">
+            <img src="img/pic003.jpeg" alt="Aretes Flora Lavender" loading="lazy">
+            <div class="producto-info">
+              <h2>Aretes Flora Lavender</h2>
+              <p>Un diseño floral inspirado en tonos suaves.</p>
+              <span class="producto-precio">$22.000</span>
+              <button type="button" class="btn-qchula" onclick="agregarAlCarrito('Aretes Flora Lavender',22000,'img/pic003.jpeg')">Agregar al carrito</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 producto-catalogo" data-categoria="aretes">
+          <article class="producto-card">
+            <img src="img/pic007.jpeg" alt="Aretes Geo Gold XL" loading="lazy">
+            <div class="producto-info">
+              <h2>Aretes Geo Gold XL</h2>
+              <p>Un accesorio llamativo para destacar tu estilo.</p>
+              <span class="producto-precio">$25.000</span>
+              <button type="button" class="btn-qchula" onclick="agregarAlCarrito('Aretes Geo Gold XL',25000,'img/pic007.jpeg')">Agregar al carrito</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 producto-catalogo" data-categoria="aretes">
+          <article class="producto-card">
+            <img src="img/Untitled design (5).jpg" alt="Aretes Mariposa Gold" loading="lazy">
+            <div class="producto-info">
+              <h2>Aretes Mariposa Gold</h2>
+              <p>Un detalle dorado con movimiento y elegancia.</p>
+              <span class="producto-precio">$23.000</span>
+              <button type="button" class="btn-qchula" onclick="agregarAlCarrito('Aretes Mariposa Gold',23000,'img/Untitled design (5).jpg')">Agregar al carrito</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 producto-catalogo" data-categoria="otros">
+          <article class="producto-card">
+            <img src="img/pic005.jpeg" alt="Anillos Candy Pastel" loading="lazy">
+            <div class="producto-info">
+              <h2>Anillos Candy Pastel</h2>
+              <p>Colores divertidos para combinar a tu manera.</p>
+              <span class="producto-precio">$18.000</span>
+              <button type="button" class="btn-qchula" onclick="agregarAlCarrito('Anillos Candy Pastel',18000,'img/pic005.jpeg')">Agregar al carrito</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 producto-catalogo" data-categoria="pulseras">
+          <article class="producto-card">
+            <img src="img/pic006.jpeg" alt="Set Pulseras Boho Black and Gold" loading="lazy">
+            <div class="producto-info">
+              <h2>Set Pulseras Boho Black &amp; Gold</h2>
+              <p>Una combinación de tonos oscuros y dorados.</p>
+              <span class="producto-precio">$20.000</span>
+              <button type="button" class="btn-qchula" onclick="agregarAlCarrito('Set Pulseras Boho Black & Gold',20000,'img/pic006.jpeg')">Agregar al carrito</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 producto-catalogo" data-categoria="pulseras">
+          <article class="producto-card">
+            <img src="img/pic008.jpeg" alt="Pulsera Verde Esperanza" loading="lazy">
+            <div class="producto-info">
+              <h2>Pulsera Esperanza</h2>
+              <p>Un toque de color para tus combinaciones.</p>
+              <span class="producto-precio">$20.000</span>
+              <button type="button" class="btn-qchula" onclick="agregarAlCarrito('Pulsera Verde Esperanza',20000,'img/pic008.jpeg')">Agregar al carrito</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 producto-catalogo" data-categoria="pulseras">
+          <article class="producto-card">
+            <img src="img/pic009.jpeg" alt="Pulsera Rosario Fe y Red" loading="lazy">
+            <div class="producto-info">
+              <h2>Pulsera Rosario Fe &amp; Red</h2>
+              <p>Un accesorio rojo con un detalle especial.</p>
+              <span class="producto-precio">$15.000</span>
+              <button type="button" class="btn-qchula" onclick="agregarAlCarrito('Pulsera Rosario Fe & Red',15000,'img/pic009.jpeg')">Agregar al carrito</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 producto-catalogo" data-categoria="pulseras">
+          <article class="producto-card">
+            <img src="img/Untitled design (1).jpg" alt="Set Candy Pop" loading="lazy">
+            <div class="producto-info">
+              <h2>Set Candy Pop</h2>
+              <p>Pulseras de tonos pastel para un look alegre.</p>
+              <span class="producto-precio">$18.000</span>
+              <button type="button" class="btn-qchula" onclick="agregarAlCarrito('Set Candy Pop',18000,'img/Untitled design (1).jpg')">Agregar al carrito</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 producto-catalogo" data-categoria="collares">
+          <article class="producto-card">
+            <img src="img/Untitled design (13).jpg" alt="Collar Coin Gold" loading="lazy">
+            <div class="producto-info">
+              <h2>Collar Coin Gold</h2>
+              <p>Un medallón dorado con aire clásico.</p>
+              <span class="producto-precio">$25.000</span>
+              <button type="button" class="btn-qchula" onclick="agregarAlCarrito('Collar Coin Gold',25000,'img/Untitled design (13).jpg')">Agregar al carrito</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 producto-catalogo" data-categoria="collares">
+          <article class="producto-card">
+            <img src="img/Untitled design (8).jpg" alt="Choker Pink Pearl" loading="lazy">
+            <div class="producto-info">
+              <h2>Choker Pink Pearl</h2>
+              <p>Un collar delicado con un toque romántico.</p>
+              <span class="producto-precio">$20.000</span>
+              <button type="button" class="btn-qchula" onclick="agregarAlCarrito('Choker Pink Pearl',20000,'img/Untitled design (8).jpg')">Agregar al carrito</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 producto-catalogo" data-categoria="otros">
+          <article class="producto-card">
+            <img src="img/Untitled design (9).jpg" alt="Pinza Pearl Crown" loading="lazy">
+            <div class="producto-info">
+              <h2>Pinza Pearl Crown</h2>
+              <p>Un accesorio delicado para recoger tu cabello.</p>
+              <span class="producto-precio">$16.000</span>
+              <button type="button" class="btn-qchula" onclick="agregarAlCarrito('Pinza Pearl Crown',16000,'img/Untitled design (9).jpg')">Agregar al carrito</button>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="pie-qchula">
+    <div class="container">
+      <p>Q' Chula Accesorios</p>
+      <p>Accesorios para expresar tu esencia.</p>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <!-- Filtros del catálogo: no modifica el funcionamiento del carrito -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const botones = document.querySelectorAll(".filtro-btn");
+      const productos = document.querySelectorAll(".producto-catalogo");
+      const contador = document.getElementById("contadorProductos");
+
+      function filtrar(categoria) {
+        let visibles = 0;
+
+        productos.forEach(function (producto) {
+          const coincide = categoria === "todos" ||
+            producto.dataset.categoria === categoria;
+
+          producto.hidden = !coincide;
+
+          if (coincide) visibles++;
+        });
+
+        contador.textContent = visibles + (visibles === 1 ? " producto" : " productos");
+
+        botones.forEach(function (boton) {
+          const activo = boton.dataset.filtro === categoria;
+          boton.classList.toggle("active", activo);
+          boton.setAttribute("aria-pressed", String(activo));
+        });
+      }
+
+      botones.forEach(function (boton) {
+        boton.addEventListener("click", function () {
+          filtrar(boton.dataset.filtro);
+        });
+      });
+
+      filtrar("todos");
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora la galería de Q' Chula Accesorios: detalles, accesorios y momentos llenos de estilo.">
+    <title>Galería | Q' Chula Accesorios</title>
+
+    <!-- Bootstrap local -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-qchula">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                Q’ Chula <span>Accesorios</span>
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarQChula"
+                aria-controls="navbarQChula"
+                aria-expanded="false"
+                aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarQChula">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="colecciones.html">Colecciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="historia.html">Nuestra esencia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="galeria.html">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html">Mi carrito</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- ENCABEZADO -->
+    <header class="galeria-hero">
+        <div class="container">
+
+            <p class="section-subtitle">Q’ CHULA ACCESORIOS · INSPIRACIÓN</p>
+
+            <h1>
+                Pequeños detalles,<br>
+                <span>grandes formas de brillar.</span>
+            </h1>
+
+            <p class="galeria-intro">
+                Cada accesorio tiene su encanto y cada estilo cuenta algo diferente.
+                Un espacio para descubrir los detalles, las texturas y la esencia
+                que hacen especial a Q’ Chula.
+            </p>
+
+            <a href="#inspiracion" class="btn btn-qchula">
+                Explorar la galería
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- GALERÍA VISUAL -->
+    <main>
+
+        <section class="galeria-seccion section-padding" id="inspiracion">
+            <div class="container">
+
+                <div class="galeria-encabezado">
+                    <div>
+                        <p class="section-subtitle">UN UNIVERSO DE DETALLES</p>
+                        <h2>Inspiración en cada rincón</h2>
+                    </div>
+
+                    <p class="galeria-nota">
+                        Accesorios para acompañarte, expresar tu personalidad
+                        y hacer tuyo cada momento.
+                    </p>
+                </div>
+
+
+                <!-- Cada tarjeta puede abrirse para ver la imagen ampliada -->
+                <div class="galeria-grid">
+
+                    <button class="galeria-item galeria-item-alta"
+                            type="button"
+                            data-imagen="img/qchula1.jpg"
+                            data-titulo="Detalles que enamoran"
+                            aria-label="Ver imagen: Detalles que enamoran">
+                        <img src="img/qchula1.jpg"
+                             alt="Accesorios Q’ Chula en una composición delicada"
+                             loading="lazy">
+                        <span class="galeria-overlay">
+                            <span class="galeria-caption">
+                                <small>01 · ESENCIA</small>
+                                <strong>Detalles que enamoran</strong>
+                            </span>
+                            <span class="galeria-ampliar" aria-hidden="true">↗</span>
+                        </span>
+                    </button>
+
+
+                    <button class="galeria-item"
+                            type="button"
+                            data-imagen="img/Untitled design (18).jpg"
+                            data-titulo="Un toque especial"
+                            aria-label="Ver imagen: Un toque especial">
+                        <img src="img/Untitled design (18).jpg"
+                             alt="Accesorios para complementar un estilo personal"
+                             loading="lazy">
+                        <span class="galeria-overlay">
+                            <span class="galeria-caption">
+                                <small>02 · ESTILO</small>
+                                <strong>Un toque especial</strong>
+                            </span>
+                            <span class="galeria-ampliar" aria-hidden="true">↗</span>
+                        </span>
+                    </button>
+
+
+                    <button class="galeria-item"
+                            type="button"
+                            data-imagen="img/Untitled design (5).jpg"
+                            data-titulo="La belleza de los detalles"
+                            aria-label="Ver imagen: La belleza de los detalles">
+                        <img src="img/Untitled design (5).jpg"
+                             alt="Detalle de accesorios Q’ Chula"
+                             loading="lazy">
+                        <span class="galeria-overlay">
+                            <span class="galeria-caption">
+                                <small>03 · DETALLES</small>
+                                <strong>La belleza de los detalles</strong>
+                            </span>
+                            <span class="galeria-ampliar" aria-hidden="true">↗</span>
+                        </span>
+                    </button>
+
+
+                    <button class="galeria-item"
+                            type="button"
+                            data-imagen="img/pic016.jpeg"
+                            data-titulo="Delicada por naturaleza"
+                            aria-label="Ver imagen: Delicada por naturaleza">
+                        <img src="img/pic016.jpeg"
+                             alt="Inspiración delicada para lucir accesorios"
+                             loading="lazy">
+                        <span class="galeria-overlay">
+                            <span class="galeria-caption">
+                                <small>04 · DELICADEZA</small>
+                                <strong>Delicada por naturaleza</strong>
+                            </span>
+                            <span class="galeria-ampliar" aria-hidden="true">↗</span>
+                        </span>
+                    </button>
+
+
+                    <button class="galeria-item galeria-item-alta"
+                            type="button"
+                            data-imagen="img/Untitled design (14).jpg"
+                            data-titulo="Auténtica a tu manera"
+                            aria-label="Ver imagen: Auténtica a tu manera">
+                        <img src="img/Untitled design (14).jpg"
+                             alt="Inspiración de estilo auténtico de Q’ Chula"
+                             loading="lazy">
+                        <span class="galeria-overlay">
+                            <span class="galeria-caption">
+                                <small>05 · AUTENTICIDAD</small>
+                                <strong>Auténtica a tu manera</strong>
+                            </span>
+                            <span class="galeria-ampliar" aria-hidden="true">↗</span>
+                        </span>
+                    </button>
+
+
+                    <button class="galeria-item"
+                            type="button"
+                            data-imagen="img/pic002.jpeg"
+                            data-titulo="Brilla siendo tú"
+                            aria-label="Ver imagen: Brilla siendo tú">
+                        <img src="img/pic002.jpeg"
+                             alt="Accesorios para expresar una personalidad única"
+                             loading="lazy">
+                        <span class="galeria-overlay">
+                            <span class="galeria-caption">
+                                <small>06 · PERSONALIDAD</small>
+                                <strong>Brilla siendo tú</strong>
+                            </span>
+                            <span class="galeria-ampliar" aria-hidden="true">↗</span>
+                        </span>
+                    </button>
+
+                </div>
+
+                <p class="galeria-pie">
+                    Q’ Chula Accesorios · Tu esencia también está en los detalles.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- FRASE DE CIERRE -->
+        <section class="galeria-manifiesto">
+            <div class="container text-center">
+
+                <span class="galeria-flor" aria-hidden="true">✳</span>
+
+                <p class="section-subtitle">TU ESTILO, TUS REGLAS</p>
+
+                <h2>
+                    No se trata solo de llevar accesorios,
+                    <span>sino de llevar algo de ti.</span>
+                </h2>
+
+                <a href="productos.html" class="btn btn-qchula">
+                    Encuentra tu favorito
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- VISOR DE IMÁGENES -->
+    <div class="galeria-modal"
+         id="galeriaModal"
+         role="dialog"
+         aria-modal="true"
+         aria-label="Imagen ampliada"
+         aria-hidden="true"
+         hidden>
+
+        <button class="galeria-cerrar"
+                type="button"
+                aria-label="Cerrar imagen ampliada">
+            &times;
+        </button>
+
+        <button class="galeria-anterior"
+                type="button"
+                aria-label="Ver imagen anterior">
+            &#8592;
+        </button>
+
+        <figure class="galeria-modal-contenido">
+            <img id="galeriaModalImagen" src="" alt="">
+            <figcaption id="galeriaModalTitulo"></figcaption>
+        </figure>
+
+        <button class="galeria-siguiente"
+                type="button"
+                aria-label="Ver imagen siguiente">
+            &#8594;
+        </button>
+
+    </div>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer-qchula">
+        <div class="container">
+
+            <div class="row gy-4 align-items-start">
+
+                <div class="col-lg-5">
+                    <a href="index.html" class="footer-logo">
+                        Q’ Chula <span>Accesorios</span>
+                    </a>
+                    <p class="footer-descripcion">
+                        Accesorios que acompañan tu esencia y celebran
+                        las diferentes formas de ser tú.
+                    </p>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <h3 class="footer-titulo">Explora</h3>
+                    <ul class="footer-links">
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="colecciones.html">Colecciones</a></li>
+                        <li><a href="historia.html">Nuestra esencia</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-4">
+                    <h3 class="footer-titulo">Conecta con Q’ Chula</h3>
+                    <ul class="footer-links">
+                        <li><a href="contacto.html">Contáctanos</a></li>
+                        <li><a href="carrito.html">Mi carrito</a></li>
+                    </ul>
+                    <a href="contacto.html" class="footer-cta">
+                        Hablemos de tu estilo ↗
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="footer-inferior">
+                <p>© <span id="anioActual"></span> Q’ Chula Accesorios.</p>
+                <p>Hecho con esencia y estilo.</p>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- SCRIPTS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
