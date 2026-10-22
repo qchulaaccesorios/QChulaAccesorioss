@@ -1,0 +1,4463 @@
+
+/*Q' CHULA ACCESORIOS*/
+
+:root {
+    --menta: #d1faf5;
+    --rosado: #F7C8CE;
+    --lila: #d2b4f5;
+    --marfil: #FFFAF7;
+    --blanco: #FFFFFF;
+    --vino: #641F36;
+    --cacao: #493B3B;
+    --texto: #665858;
+    --dorado: #B89559;
+    --menta-claro: #EFFAF8;
+    --rosado-claro: #FFF0F2;
+    --lila-claro: #F3ECFF;
+
+    --fuente-titulos: "Cormorant Garamond", Georgia, serif;
+    --fuente-texto: "Poppins", Arial, sans-serif;
+
+    --ancho-contenido: 1240px;
+    --transicion: 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: var(--fuente-texto);
+    color: var(--texto);
+    background: var(--marfil);
+    font-size: 15px;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--vino);
+    outline-offset: 4px;
+}
+
+section {
+    position: relative;
+    scroll-margin-top: 88px;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--ancho-contenido);
+}
+
+::selection {
+    color: var(--vino);
+    background: var(--rosado);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 0;
+    font-family: var(--fuente-titulos);
+    color: var(--cacao);
+    font-weight: 500;
+    line-height: 1.08;
+}
+
+h1 {
+    font-size: clamp(2.8rem, 6vw, 6rem);
+    letter-spacing: -0.045em;
+}
+
+h2 {
+    margin-bottom: 22px;
+    font-size: clamp(2.4rem, 4.8vw, 4.5rem);
+    letter-spacing: -0.035em;
+}
+
+h3 {
+    font-size: clamp(1.7rem, 3vw, 2.5rem);
+}
+
+p {
+    overflow-wrap: break-word;
+}
+
+.seccion-espaciada {
+    padding: 105px 0;
+}
+
+.section-subtitle {
+    margin-bottom: 15px;
+    color: var(--vino);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.23em;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+.section-description {
+    width: min(100%, 650px);
+    margin: 0 auto;
+    color: var(--texto);
+    font-size: 0.95rem;
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 42px;
+}
+
+.section-heading h2 {
+    margin-bottom: 0;
+}
+
+.section-heading .section-subtitle {
+    margin-bottom: 12px;
+}
+
+.adorno-linea {
+    display: block;
+    width: 60px;
+    height: 2px;
+    margin: 28px auto 0;
+    background: var(--dorado);
+}
+
+em {
+    color: var(--vino);
+    font-weight: 500;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar-qchula {
+    min-height: 76px;
+    padding: 12px 0;
+    background: rgba(255, 250, 247, 0.97);
+    border-bottom: 1px solid rgba(100, 31, 54, 0.08);
+    box-shadow: 0 3px 20px rgba(73, 59, 59, 0.035);
+    backdrop-filter: blur(14px);
+    z-index: 1030;
+}
+
+.navbar-qchula .container {
+    gap: 18px;
+}
+
+.navbar-qchula .navbar-brand {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    color: var(--vino);
+    font-family: var(--fuente-titulos);
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+}
+
+.navbar-qchula .navbar-brand span {
+    margin-top: 7px;
+    font-family: var(--fuente-texto);
+    font-size: 0.54rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-align: center;
+}
+
+.navbar-qchula .navbar-nav {
+    gap: 5px;
+}
+
+.navbar-qchula .nav-link {
+    position: relative;
+    padding: 10px 11px !important;
+    color: var(--cacao);
+    font-size: 0.76rem;
+    font-weight: 500;
+    transition: color var(--transicion);
+}
+
+.navbar-qchula .nav-link::after {
+    position: absolute;
+    right: 11px;
+    bottom: 4px;
+    left: 11px;
+    height: 1px;
+    background: var(--vino);
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transicion);
+}
+
+.navbar-qchula .nav-link:hover,
+.navbar-qchula .nav-link.active {
+    color: var(--vino);
+}
+
+.navbar-qchula .nav-link:hover::after,
+.navbar-qchula .nav-link.active::after {
+    transform: scaleX(1);
+}
+
+.navbar-qchula .nav-carrito {
+    padding: 9px 15px !important;
+    border: 1px solid var(--rosado);
+    border-radius: 30px;
+}
+
+.navbar-qchula .nav-carrito::after {
+    display: none;
+}
+
+.navbar-qchula .nav-carrito:hover {
+    background: var(--rosado-claro);
+}
+
+.navbar-toggler {
+    padding: 7px 9px;
+    border-color: rgba(100, 31, 54, 0.25);
+    box-shadow: none !important;
+}
+
+
+/* ================= CARRUSEL ================= */
+
+.banner-carrusel {
+    width: 100%;
+    margin-top: 76px;
+    overflow: hidden;
+    background: var(--menta);
+}
+
+.banner-carrusel .carousel,
+.banner-carrusel .carousel-inner,
+.banner-carrusel .carousel-item {
+    width: 100%;
+}
+
+.banner-carrusel .carousel-item {
+    position: relative;
+    isolation: isolate;
+    background: var(--menta);
+}
+
+/* El degradado solo cubre las diapositivas con texto.
+   La primera imagen queda completamente limpia. */
+.banner-carrusel .carousel-item:not(:first-child)::after {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(28, 18, 23, 0.54) 0%,
+        rgba(28, 18, 23, 0.28) 44%,
+        rgba(28, 18, 23, 0.02) 100%
+    );
+    content: "";
+    pointer-events: none;
+}
+
+.banner-carrusel .carousel-item img {
+    display: block;
+    width: 100%;
+    height: clamp(430px, 52vw, 690px);
+    object-fit: cover;
+    object-position: center;
+}
+
+.banner-carrusel .carousel-caption {
+    z-index: 1;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 11%;
+    width: min(65%, 700px);
+    padding: 20px 0;
+    text-align: left;
+    transform: translateY(-50%);
+}
+
+.banner-etiqueta {
+    margin-bottom: 17px;
+    color: var(--blanco);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+}
+
+.banner-carrusel .carousel-caption h2 {
+    margin-bottom: 18px;
+    color: var(--blanco);
+    font-size: clamp(3rem, 6.5vw, 6rem);
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+.banner-descripcion {
+    max-width: 470px;
+    margin-bottom: 27px;
+    color: var(--blanco);
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+    line-height: 1.8;
+}
+
+/* Botón transparente general */
+.btn-qchula {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    min-height: 49px;
+    padding: 13px 22px;
+    border: 1px solid currentColor;
+    border-radius: 2px;
+    background: transparent;
+    color: var(--vino);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition:
+        color var(--transicion),
+        background var(--transicion),
+        border-color var(--transicion),
+        transform var(--transicion);
+}
+
+.btn-qchula span {
+    font-size: 1rem;
+    transition: transform var(--transicion);
+}
+
+.btn-qchula:hover {
+    background: var(--vino);
+    border-color: var(--vino);
+    color: var(--blanco);
+    transform: translateY(-2px);
+}
+
+.btn-qchula:hover span {
+    transform: translate(3px, -3px);
+}
+
+/* Botón transparente sobre el banner */
+.banner-carrusel .btn-qchula {
+    border-color: rgba(255, 255, 255, 0.85);
+    background: transparent;
+    color: var(--blanco);
+}
+
+.banner-carrusel .btn-qchula:hover {
+    border-color: var(--rosado);
+    background: var(--rosado);
+    color: var(--vino);
+}
+
+/* Botones sólidos de otras secciones */
+.btn-qchula-oscuro {
+    border-color: var(--vino);
+    background: var(--vino);
+    color: var(--blanco);
+}
+
+.btn-qchula-oscuro:hover {
+    border-color: var(--cacao);
+    background: var(--cacao);
+    color: var(--blanco);
+}
+
+/* Indicadores */
+.banner-carrusel .carousel-indicators {
+    z-index: 2;
+    margin-bottom: 22px;
+}
+
+.banner-carrusel .carousel-indicators [data-bs-target] {
+    width: 27px;
+    height: 4px;
+    margin: 0 5px;
+    border: 0;
+    border-radius: 20px;
+    background: var(--rosado);
+    opacity: 0.65;
+    transition: width var(--transicion), opacity var(--transicion);
+}
+
+.banner-carrusel .carousel-indicators .active {
+    width: 42px;
+    background: var(--lila);
+    opacity: 1;
+}
+
+/* Flechas */
+.banner-carrusel .carousel-control-prev,
+.banner-carrusel .carousel-control-next {
+    z-index: 3;
+    width: 8%;
+    opacity: 0.85;
+    transition: opacity var(--transicion);
+}
+
+.banner-carrusel .carousel-control-prev:hover,
+.banner-carrusel .carousel-control-next:hover {
+    opacity: 1;
+}
+
+.banner-carrusel .carousel-control-prev-icon,
+.banner-carrusel .carousel-control-next-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(100, 31, 54, 0.55);
+    background-size: 50%;
+}
+
+
+/* ================= BIENVENIDA ================= */
+
+.bienvenida {
+    padding: 105px 20px 95px;
+    background: var(--marfil);
+}
+
+.bienvenida h2 {
+    margin-bottom: 20px;
+}
+
+.bienvenida .section-description {
+    line-height: 2;
+}
+
+
+/* ================= PRODUCTOS ================= */
+
+.productos {
+    background: var(--blanco);
+}
+
+.enlace-elegante {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--dorado);
+    color: var(--vino);
+    font-size: 0.78rem;
+    font-weight: 500;
+    transition: gap var(--transicion);
+}
+
+.enlace-elegante:hover {
+    gap: 20px;
+    color: var(--vino);
+}
+
+.producto-card {
+    height: 100%;
+    background: var(--blanco);
+}
+
+.producto-imagen {
+    position: relative;
+    overflow: hidden;
+    background: var(--lila-claro);
+    aspect-ratio: 4 / 5;
+}
+
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.65s ease;
+}
+
+.producto-card:hover .producto-imagen img {
+    transform: scale(1.045);
+}
+
+.producto-etiqueta {
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    left: 15px;
+    padding: 6px 12px;
+    border-radius: 30px;
+    background: var(--rosado);
+    color: var(--vino);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+}
+
+.producto-etiqueta-lila {
+    background: var(--lila-claro);
+}
+
+.producto-etiqueta-menta {
+    background: var(--menta);
+}
+
+.producto-accion {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    padding: 12px;
+    border: 0;
+    background: rgba(255, 250, 247, 0.96);
+    color: var(--vino);
+    font-size: 0.76rem;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(8px);
+    transition:
+        opacity var(--transicion),
+        transform var(--transicion),
+        background var(--transicion);
+    cursor: pointer;
+}
+
+.producto-accion:hover {
+    background: var(--rosado);
+}
+
+.producto-card:hover .producto-accion,
+.producto-accion:focus-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.producto-contenido {
+    padding: 20px 3px 0;
+}
+
+.producto-categoria {
+    margin-bottom: 6px;
+    color: var(--vino);
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+}
+
+.producto-contenido h3 {
+    margin-bottom: 14px;
+    font-size: 1.8rem;
+}
+
+.producto-abajo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.precio-producto {
+    margin: 0;
+    color: var(--cacao);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.producto-consulta {
+    display: grid;
+    width: 35px;
+    height: 35px;
+    place-items: center;
+    border: 1px solid var(--rosado);
+    border-radius: 50%;
+    color: var(--vino);
+    transition: color var(--transicion), background var(--transicion);
+}
+
+.producto-consulta:hover {
+    background: var(--rosado);
+    color: var(--vino);
+}
+
+.productos-final {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 52px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(100, 31, 54, 0.1);
+}
+
+.productos-final p {
+    margin: 0;
+    font-family: var(--fuente-titulos);
+    color: var(--cacao);
+    font-size: 1.5rem;
+}
+
+
+/* ================= COLECCIONES ================= */
+
+.colecciones {
+    background: var(--lila-claro);
+}
+
+.coleccion-intro {
+    margin-bottom: 45px;
+}
+
+.coleccion-intro h2 {
+    max-width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.coleccion-tarjeta {
+    position: relative;
+    display: block;
+    min-height: 430px;
+    overflow: hidden;
+    background: var(--rosado);
+    color: var(--blanco);
+}
+
+.coleccion-tarjeta::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(30, 20, 24, 0.02) 20%,
+        rgba(30, 20, 24, 0.7) 100%
+    );
+    content: "";
+    transition: background var(--transicion);
+}
+
+.coleccion-tarjeta img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    transition: transform 0.65s ease;
+}
+
+.coleccion-tarjeta:hover img {
+    transform: scale(1.06);
+}
+
+.coleccion-overlay {
+    position: absolute;
+    z-index: 1;
+    right: 25px;
+    bottom: 25px;
+    left: 25px;
+    color: var(--blanco);
+}
+
+.coleccion-overlay > span:first-child {
+    font-size: 0.63rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+}
+
+.coleccion-overlay h3 {
+    margin: 10px 0;
+    color: var(--blanco);
+    font-size: 2.8rem;
+}
+
+.coleccion-overlay p {
+    margin-bottom: 0;
+    font-size: 0.8rem;
+}
+
+.coleccion-flecha {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    color: var(--blanco);
+    transition: background var(--transicion), color var(--transicion);
+}
+
+.coleccion-tarjeta:hover .coleccion-flecha {
+    background: var(--blanco);
+    color: var(--vino);
+}
+
+
+/* ================= HISTORIA ================= */
+
+.historia {
+    background: var(--marfil);
+}
+
+.historia-imagen {
+    position: relative;
+    min-height: 500px;
+    background: var(--menta);
+}
+
+.historia-imagen > img {
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+}
+
+.historia-sello {
+    position: absolute;
+    right: -18px;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 130px;
+    border: 1px solid var(--dorado);
+    border-radius: 50%;
+    background: var(--marfil);
+    color: var(--vino);
+    text-align: center;
+}
+
+.historia-sello span {
+    font-family: var(--fuente-titulos);
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.historia-sello small {
+    margin-top: 8px;
+    font-size: 0.48rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+}
+
+.historia-texto {
+    padding: 10px 0 10px 25px;
+}
+
+.historia-texto > p:not(.section-subtitle) {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    line-height: 2;
+}
+
+.historia-frase {
+    margin: 28px 0;
+    padding: 8px 0 8px 22px;
+    border-left: 2px solid var(--rosado);
+    color: var(--vino);
+    font-family: var(--fuente-titulos);
+    font-size: 1.7rem;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+
+/* ================= GALERÍA ================= */
+
+.galeria {
+    background: var(--blanco);
+}
+
+.galeria-intro {
+    max-width: 310px;
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: 230px;
+    gap: 14px;
+}
+
+.galeria-item {
+    position: relative;
+    overflow: hidden;
+    background: var(--menta);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.65s ease;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.06);
+}
+
+.galeria-grande {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.galeria-ancha {
+    grid-column: span 2;
+}
+
+.galeria-item > span {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 30px 20px 17px;
+    background: linear-gradient(transparent, rgba(45, 25, 35, 0.62));
+    color: var(--blanco);
+    font-family: var(--fuente-titulos);
+    font-size: 1.6rem;
+}
+
+.galeria-frase {
+    margin: 45px 0 0;
+    color: var(--vino);
+    font-family: var(--fuente-titulos);
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-style: italic;
+    text-align: center;
+}
+
+
+/* ================= CONTACTO ================= */
+
+.contacto {
+    overflow: hidden;
+    background: var(--marfil);
+}
+
+.contacto-panel {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 85px 25px;
+    background: var(--menta);
+    text-align: center;
+}
+
+.contacto-panel-contenido {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 740px);
+    margin: 0 auto;
+}
+
+.contacto-panel h2 {
+    margin-bottom: 20px;
+}
+
+.contacto-panel-contenido > p:not(.section-subtitle) {
+    max-width: 580px;
+    margin: 0 auto 30px;
+    font-size: 0.9rem;
+}
+
+.contacto-circulo {
+    position: absolute;
+    z-index: -1;
+    border: 1px solid rgba(100, 31, 54, 0.12);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.contacto-circulo-uno {
+    top: -130px;
+    left: -100px;
+    width: 350px;
+    height: 350px;
+}
+
+.contacto-circulo-dos {
+    right: -100px;
+    bottom: -190px;
+    width: 420px;
+    height: 420px;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer-qchula {
+    padding: 65px 0 0;
+    background: var(--lila);
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.footer-marca {
+    display: inline-flex;
+    flex-direction: column;
+    color: var(--blanco);
+    font-family: var(--fuente-titulos);
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+}
+
+.footer-marca:hover {
+    color: var(--rosado);
+}
+
+.footer-marca span {
+    margin-top: 9px;
+    font-family: var(--fuente-texto);
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+}
+
+.footer-descripcion {
+    max-width: 380px;
+    margin-top: 23px;
+    font-size: 0.8rem;
+    line-height: 1.9;
+}
+
+.footer-qchula h3 {
+    margin-bottom: 20px;
+    color: var(--rosado);
+    font-family: var(--fuente-texto);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.footer-enlaces {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-enlaces li {
+    margin-bottom: 10px;
+}
+
+.footer-enlaces a {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.78rem;
+    transition: color var(--transicion);
+}
+
+.footer-enlaces a:hover {
+    color: var(--rosado);
+}
+
+.footer-nota {
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.73rem;
+}
+
+.footer-final {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px 25px;
+    margin-top: 50px;
+    padding: 22px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.17);
+}
+
+.footer-final p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 0.68rem;
+}
+
+
+/* ================= TABLETAS ================= */
+
+@media (max-width: 991.98px) {
+
+    .seccion-espaciada {
+        padding: 80px 0;
+    }
+
+    .navbar-qchula .navbar-collapse {
+        padding: 15px 0 8px;
+    }
+
+    .navbar-qchula .navbar-nav {
+        align-items: stretch !important;
+        gap: 2px;
+    }
+
+    .navbar-qchula .nav-link {
+        padding: 10px 4px !important;
+    }
+
+    .navbar-qchula .nav-link::after {
+        display: none;
+    }
+
+    .navbar-qchula .nav-carrito {
+        display: inline-block;
+        width: fit-content;
+        margin-top: 8px;
+    }
+
+    .banner-carrusel .carousel-caption {
+        left: 9%;
+        width: 75%;
+    }
+
+    .banner-carrusel .carousel-item img {
+        height: 540px;
+    }
+
+    .coleccion-tarjeta,
+    .coleccion-tarjeta img {
+        min-height: 360px;
+        height: 360px;
+    }
+
+    .historia-imagen,
+    .historia-imagen > img {
+        min-height: 430px;
+        height: 430px;
+    }
+
+    .historia-texto {
+        padding-left: 5px;
+    }
+
+    .galeria-grid {
+        grid-auto-rows: 190px;
+    }
+}
+
+
+/* ================= CELULARES ================= */
+
+@media (max-width: 767.98px) {
+
+    html {
+        scroll-padding-top: 78px;
+    }
+
+    section {
+        scroll-margin-top: 78px;
+    }
+
+    .seccion-espaciada {
+        padding: 65px 0;
+    }
+
+    .navbar-qchula {
+        min-height: 68px;
+        padding: 10px 0;
+    }
+
+    .navbar-qchula .navbar-brand {
+        font-size: 1.8rem;
+    }
+
+    .navbar-qchula .navbar-brand span {
+        font-size: 0.48rem;
+    }
+
+    .banner-carrusel {
+        margin-top: 68px;
+    }
+
+    .banner-carrusel .carousel-item img {
+        height: 490px;
+        object-position: center;
+    }
+
+    .banner-carrusel .carousel-item:not(:first-child)::after {
+        background: linear-gradient(
+            90deg,
+            rgba(28, 18, 23, 0.58),
+            rgba(28, 18, 23, 0.18)
+        );
+    }
+
+    .banner-carrusel .carousel-caption {
+        right: 12%;
+        left: 12%;
+        width: 76%;
+        padding: 10px 0 20px;
+    }
+
+    .banner-etiqueta {
+        margin-bottom: 12px;
+        font-size: 0.59rem;
+        letter-spacing: 0.17em;
+    }
+
+    .banner-carrusel .carousel-caption h2 {
+        margin-bottom: 14px;
+        font-size: clamp(2.7rem, 10vw, 4.3rem);
+    }
+
+    .banner-descripcion {
+        max-width: 350px;
+        margin-bottom: 20px;
+        font-size: 0.78rem;
+        line-height: 1.7;
+    }
+
+    .btn-qchula {
+        min-height: 45px;
+        gap: 13px;
+        padding: 11px 15px;
+        font-size: 0.63rem;
+    }
+
+    .banner-carrusel .carousel-indicators {
+        margin-bottom: 12px;
+    }
+
+    .banner-carrusel .carousel-indicators [data-bs-target] {
+        width: 19px;
+        height: 3px;
+        margin: 0 4px;
+    }
+
+    .banner-carrusel .carousel-indicators .active {
+        width: 30px;
+    }
+
+    .banner-carrusel .carousel-control-prev,
+    .banner-carrusel .carousel-control-next {
+        width: 10%;
+    }
+
+    .banner-carrusel .carousel-control-prev-icon,
+    .banner-carrusel .carousel-control-next-icon {
+        width: 26px;
+        height: 26px;
+    }
+
+    .bienvenida {
+        padding: 70px 20px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 17px;
+        margin-bottom: 30px;
+    }
+
+    .section-heading h2 {
+        max-width: 600px;
+    }
+
+    .producto-imagen {
+        aspect-ratio: 4 / 5;
+    }
+
+    .producto-accion {
+        position: static;
+        display: block;
+        width: 100%;
+        padding: 12px 8px;
+        border-top: 1px solid rgba(100, 31, 54, 0.1);
+        background: var(--rosado-claro);
+        opacity: 1;
+        transform: none;
+    }
+
+    .producto-card:hover .producto-accion {
+        transform: none;
+    }
+
+    .producto-contenido {
+        padding-top: 15px;
+    }
+
+    .producto-contenido h3 {
+        font-size: 1.7rem;
+    }
+
+    .productos-final {
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .productos-final p {
+        font-size: 1.35rem;
+    }
+
+    .coleccion-intro {
+        margin-bottom: 30px;
+    }
+
+    .coleccion-tarjeta,
+    .coleccion-tarjeta img {
+        min-height: 390px;
+        height: 390px;
+    }
+
+    .historia-imagen,
+    .historia-imagen > img {
+        min-height: 390px;
+        height: 390px;
+    }
+
+    .historia-sello {
+        right: 12px;
+        bottom: 15px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .historia-sello span {
+        font-size: 1.4rem;
+    }
+
+    .historia-texto {
+        padding: 10px 0 0;
+    }
+
+    .historia-frase {
+        font-size: 1.5rem;
+    }
+
+    .galeria-header {
+        gap: 18px;
+    }
+
+    .galeria-intro {
+        max-width: 100%;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: 180px;
+        gap: 9px;
+    }
+
+    .galeria-grande {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .galeria-ancha {
+        grid-column: span 2;
+    }
+
+    .galeria-item > span {
+        padding: 25px 12px 12px;
+        font-size: 1.3rem;
+    }
+
+    .galeria-frase {
+        margin-top: 30px;
+    }
+
+    .contacto-panel {
+        padding: 65px 20px;
+    }
+
+    .footer-qchula {
+        padding-top: 50px;
+    }
+
+    .footer-final {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 35px;
+    }
+}
+
+
+/* ================= CELULARES PEQUEÑOS ================= */
+
+@media (max-width: 400px) {
+
+    .banner-carrusel .carousel-item img {
+        height: 430px;
+    }
+
+    .banner-carrusel .carousel-caption h2 {
+        font-size: 2.55rem;
+    }
+
+    .banner-etiqueta {
+        font-size: 0.53rem;
+    }
+
+    .banner-descripcion {
+        font-size: 0.72rem;
+    }
+
+    .galeria-grid {
+        grid-auto-rows: 145px;
+    }
+
+    .coleccion-tarjeta,
+    .coleccion-tarjeta img {
+        min-height: 340px;
+        height: 340px;
+    }
+}
+
+
+/* ================= MOVIMIENTO REDUCIDO ================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+    .banner-carrusel .carousel {
+        transition: none;
+    }
+}
+/* Botón invisible: sin texto, fondo ni recuadro */
+.boton-invisible-banner {
+    position: absolute;
+    z-index: 5;
+    right: 12%;
+    bottom: 13%;
+    width: 160px;
+    height: 50px;
+    display: block;
+    background: transparent !important;
+    border: none !important;
+    outline: none;
+    box-shadow: none !important;
+    text-decoration: none;
+}
+
+/* Ajuste para celulares */
+@media (max-width: 767.98px) {
+    .boton-invisible-banner {
+        right: 50%;
+        bottom: 12%;
+        transform: translateX(50%);
+    }
+}
+
+/* ==========================================
+   Q'CHULA — CARRITO DE COMPRAS
+   Estilos adaptados a carrito.html
+   ========================================== */
+
+body:has(#listaCarrito) {
+    background: #FFFAF7;
+    color: #665858;
+}
+
+/* Encabezado de la página */
+
+main > section.container.py-5 > .text-center {
+    position: relative;
+    padding: 65px 20px;
+    margin-bottom: 40px !important;
+    background: linear-gradient(135deg, #D3F1ED, #FFF5F6 55%, #F3ECFF);
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+main > section.container.py-5 > .text-center > p:first-child {
+    color: #8C6370;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+main > section.container.py-5 > .text-center h1 {
+    margin: 12px 0;
+    color: #641F36;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(48px, 6vw, 76px);
+    font-weight: 600;
+    line-height: 1.05;
+}
+
+main > section.container.py-5 > .text-center > p:last-child {
+    color: #665858;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Espaciado general */
+
+body:has(#listaCarrito) main > section.container {
+    max-width: 1180px;
+    padding-top: 45px !important;
+    padding-bottom: 80px !important;
+}
+
+/* Tarjetas de productos del carrito */
+
+#listaCarrito {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 0;
+}
+
+#listaCarrito .carrito-producto {
+    display: grid;
+    grid-template-columns: 110px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: #FFFFFF;
+    border: 1px solid #F0E4E4;
+    border-radius: 20px;
+    box-shadow: 0 8px 28px rgba(100, 31, 54, 0.045);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+#listaCarrito .carrito-producto:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(100, 31, 54, 0.09);
+}
+
+#listaCarrito .carrito-producto-imagen {
+    width: 110px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 14px;
+    background: #F7EEEE;
+}
+
+#listaCarrito .carrito-producto-info h3 {
+    color: #641F36;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+#listaCarrito .carrito-producto-info p {
+    color: #665858;
+    font-size: 13px;
+    margin-bottom: 7px;
+    line-height: 1.7;
+}
+
+#listaCarrito .carrito-producto-info strong {
+    color: #641F36;
+}
+
+/* Cantidades */
+
+#listaCarrito .carrito-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+#listaCarrito .carrito-cantidad button {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: #641F36;
+    background: #FFF5F6;
+    border: 1px solid #E8CBD2;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+#listaCarrito .carrito-cantidad button:hover {
+    background: #F7C8CE;
+}
+
+#listaCarrito .carrito-cantidad span {
+    min-width: 20px;
+    color: #641F36;
+    text-align: center;
+}
+
+/* Eliminar productos */
+
+#listaCarrito .carrito-eliminar {
+    color: #986678;
+    background: transparent;
+    border: 0;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Estado vacío */
+
+#listaCarrito .carrito-vacio {
+    padding: 50px 24px;
+    background: white;
+    border: 1px solid #F0E4E4;
+    border-radius: 22px;
+    text-align: center;
+}
+
+#listaCarrito .carrito-vacio-icono {
+    color: #B89559;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 65px;
+}
+
+#listaCarrito .carrito-vacio h3 {
+    color: #641F36;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+}
+
+#listaCarrito .carrito-vacio p {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* Botón seguir explorando */
+
+body:has(#listaCarrito) a.btn-qchula {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    margin-top: 22px;
+    padding: 12px 23px;
+    color: #641F36;
+    background: #FFFFFF;
+    border: 1px solid #E8CBD2;
+    border-radius: 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    text-decoration: none;
+    transition: .25s ease;
+}
+
+body:has(#listaCarrito) a.btn-qchula:hover {
+    background: #FFF0F3;
+    transform: translateY(-2px);
+}
+
+/* Resumen de la compra */
+
+.resumen-carrito {
+    position: sticky;
+    top: 105px;
+    padding: 28px;
+    background: #FFFFFF;
+    border: 1px solid #F0E4E4;
+    border-radius: 22px;
+    box-shadow: 0 10px 32px rgba(100, 31, 54, 0.06);
+}
+
+.resumen-carrito h2 {
+    color: #641F36;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 29px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.resumen-carrito > p {
+    color: #857777;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.resumen-carrito .total-carrito {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 24px 0;
+    padding: 20px 0;
+    color: #641F36;
+    border-top: 1px solid #F0E4E4;
+    border-bottom: 1px solid #F0E4E4;
+    font-size: 14px;
+}
+
+.resumen-carrito .total-carrito strong {
+    color: #641F36;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+/* Botones de compra */
+
+.resumen-carrito .btn-comprar,
+.resumen-carrito .btn-vaciar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 47px;
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background .25s ease, transform .25s ease;
+}
+
+.resumen-carrito .btn-comprar {
+    color: #FFFFFF;
+    background: #641F36;
+    border: 1px solid #641F36;
+}
+
+.resumen-carrito .btn-comprar:hover {
+    color: #FFFFFF;
+    background: #7D2945;
+    transform: translateY(-2px);
+}
+
+.resumen-carrito .btn-vaciar {
+    margin-top: 12px;
+    color: #641F36;
+    background: #FFFFFF;
+    border: 1px solid #E8CBD2;
+}
+
+.resumen-carrito .btn-vaciar:hover {
+    background: #FFF3F5;
+}
+
+.resumen-carrito button:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Pie de página */
+
+body:has(#listaCarrito) footer {
+    padding: 35px 20px;
+    background: #F7EEEE;
+    color: #665858;
+    text-align: center;
+}
+
+body:has(#listaCarrito) footer p {
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+body:has(#listaCarrito) footer a {
+    color: #641F36;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+/* Adaptación para tabletas */
+
+@media (max-width: 991px) {
+    .resumen-carrito {
+        position: static;
+        margin-top: 10px;
+    }
+}
+
+/* Adaptación para celulares */
+
+@media (max-width: 575px) {
+    main > section.container.py-5 > .text-center {
+        padding: 45px 15px;
+        border-radius: 18px;
+    }
+
+    body:has(#listaCarrito) main > section.container {
+        padding-top: 25px !important;
+    }
+
+    #listaCarrito .carrito-producto {
+        grid-template-columns: 78px minmax(0, 1fr);
+        gap: 13px;
+        padding: 13px;
+    }
+
+    #listaCarrito .carrito-producto-imagen {
+        width: 78px;
+        height: 100px;
+        grid-row: span 2;
+    }
+
+    #listaCarrito .carrito-producto-info h3 {
+        font-size: 21px;
+    }
+
+    #listaCarrito .carrito-producto-info p {
+        font-size: 11px;
+    }
+
+    #listaCarrito .carrito-cantidad {
+        gap: 9px;
+    }
+
+    #listaCarrito .carrito-eliminar {
+        grid-column: 2;
+        justify-self: start;
+    }
+
+    .resumen-carrito {
+        padding: 22px 18px;
+    }
+
+    .resumen-carrito h2 {
+        font-size: 26px;
+    }
+}
+
+/* Accesibilidad */
+
+@media (prefers-reduced-motion: reduce) {
+    #listaCarrito .carrito-producto,
+    body:has(#listaCarrito) a.btn-qchula,
+    .resumen-carrito button {
+        transition: none;
+    }
+}
+
+/* =========================================
+   CATÁLOGO DE PRODUCTOS - Q' CHULA
+========================================= */
+
+/* Presentación del catálogo */
+
+.catalogo-hero {
+    padding: 150px 0 75px;
+    background: linear-gradient(135deg, #fffaf7 0%, #f3ecff 100%);
+    text-align: center;
+    overflow: hidden;
+}
+
+.catalogo-hero .container {
+    max-width: 900px;
+}
+
+.catalogo-hero h1 {
+    margin: 12px 0 18px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.8rem, 6vw, 4.8rem);
+    font-weight: 600;
+    line-height: 1.05;
+    color: #493b4b;
+}
+
+.catalogo-hero .section-description {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #756a73;
+    font-size: 0.95rem;
+    line-height: 1.9;
+}
+
+.catalogo-decoracion {
+    margin-top: 30px;
+    font-size: 0.68rem;
+    letter-spacing: 0.3em;
+    color: #96839c;
+}
+
+.catalogo-decoracion span {
+    color: #d99da9;
+    font-size: 1rem;
+}
+
+
+/* Encabezado del catálogo */
+
+.catalogo-productos {
+    background: #fffdfb;
+}
+
+.catalogo-encabezado {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.catalogo-encabezado h2,
+.catalogo-cta h2 {
+    margin: 8px 0 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 600;
+    color: #493b4b;
+}
+
+.catalogo-contador {
+    margin: 0 0 7px;
+    color: #897d86;
+    font-size: 0.82rem;
+}
+
+
+/* Filtros */
+
+.catalogo-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 0 22px;
+    border-bottom: 1px solid #eee5e8;
+}
+
+.filtro-btn {
+    padding: 10px 20px;
+    border: 1px solid #e9dfe5;
+    border-radius: 30px;
+    background: transparent;
+    color: #655763;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: background 0.25s ease,
+                color 0.25s ease,
+                border-color 0.25s ease,
+                transform 0.25s ease;
+}
+
+.filtro-btn:hover {
+    border-color: #d6b7c7;
+    background: #fbf1f6;
+    transform: translateY(-2px);
+}
+
+.filtro-btn.activo {
+    border-color: #c29dec;
+    background: #c29dec;
+    color: #fff;
+}
+
+
+/* Tarjetas del catálogo */
+
+.producto-catalogo {
+    transition: opacity 0.25s ease;
+}
+
+.producto-catalogo[hidden] {
+    display: none !important;
+}
+
+.producto-card {
+    height: 100%;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #f0e8eb;
+    border-radius: 5px;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(87, 63, 79, 0.09);
+}
+
+.producto-imagen {
+    position: relative;
+    overflow: hidden;
+    background: #f7f1f3;
+    aspect-ratio: 4 / 4.5;
+}
+
+.producto-imagen img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.55s ease;
+}
+
+.producto-card:hover .producto-imagen img {
+    transform: scale(1.045);
+}
+
+.producto-etiqueta {
+    position: absolute;
+    z-index: 2;
+    top: 14px;
+    left: 14px;
+    padding: 7px 12px;
+    border-radius: 2px;
+    background: #f7c8ce;
+    color: #684a56;
+    font-size: 0.65rem;
+    letter-spacing: 0.04em;
+}
+
+.producto-etiqueta-lila {
+    background: #e8dcf8;
+    color: #665174;
+}
+
+.producto-etiqueta-menta {
+    background: #d3f1ed;
+    color: #426c65;
+}
+
+
+/* Botón sobre la imagen */
+
+.producto-accion {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    padding: 12px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    background: rgba(255, 253, 251, 0.94);
+    color: #493b4b;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.75rem;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.25s ease,
+                transform 0.25s ease,
+                background 0.25s ease;
+}
+
+.producto-card:hover .producto-accion,
+.producto-card:focus-within .producto-accion {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.producto-accion:hover {
+    background: #f7c8ce;
+}
+
+
+/* Información de cada producto */
+
+.producto-contenido {
+    padding: 20px 18px;
+}
+
+.producto-categoria {
+    margin: 0 0 8px;
+    color: #a08a9c;
+    font-size: 0.63rem;
+    letter-spacing: 0.16em;
+}
+
+.producto-contenido h2,
+.producto-contenido h3 {
+    margin: 0 0 16px;
+    color: #493b4b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.55rem;
+    font-weight: 600;
+}
+
+.producto-abajo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.precio-producto {
+    margin: 0;
+    color: #554453;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.catalogo-anadir {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border: 1px solid #eadfe7;
+    border-radius: 50%;
+    background: #fff;
+    color: #9d728d;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background 0.25s ease,
+                color 0.25s ease;
+}
+
+.catalogo-anadir:hover {
+    background: #f7c8ce;
+    color: #493b4b;
+}
+
+
+/* Mensaje para categorías vacías */
+
+.sin-productos {
+    padding: 40px 15px;
+    color: #897d86;
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.5rem;
+}
+
+
+/* Mensaje final del catálogo */
+
+.catalogo-nota {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 60px;
+    padding: 25px 15px;
+    border-top: 1px solid #eee5e8;
+    border-bottom: 1px solid #eee5e8;
+    text-align: center;
+}
+
+.catalogo-nota span {
+    color: #d99da9;
+    font-size: 1.4rem;
+}
+
+.catalogo-nota p {
+    margin: 0;
+    color: #756a73;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.25rem;
+}
+
+
+/* Invitación a contactar */
+
+.catalogo-cta {
+    padding: 75px 0;
+    background: #f3ecff;
+}
+
+.catalogo-cta .container {
+    max-width: 800px;
+}
+
+.catalogo-cta h2 {
+    margin-bottom: 16px;
+}
+
+.catalogo-cta .container > p:not(.section-subtitle) {
+    margin: 0 auto 25px;
+    max-width: 600px;
+    color: #756a73;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+
+/* Accesibilidad: mostrar claramente el foco */
+
+.filtro-btn:focus-visible,
+.producto-accion:focus-visible,
+.catalogo-anadir:focus-visible {
+    outline: 2px solid #80619a;
+    outline-offset: 4px;
+}
+
+
+/* Adaptación a móviles */
+
+@media (max-width: 767px) {
+
+    .catalogo-hero {
+        padding: 125px 0 55px;
+    }
+
+    .catalogo-encabezado {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .catalogo-filtros {
+        gap: 8px;
+    }
+
+    .filtro-btn {
+        padding: 9px 14px;
+        font-size: 0.72rem;
+    }
+
+    .producto-contenido {
+        padding: 16px 13px;
+    }
+
+    .producto-contenido h2,
+    .producto-contenido h3 {
+        font-size: 1.35rem;
+    }
+
+    /* En móviles, el botón no depende de pasar el cursor */
+    .producto-accion {
+        opacity: 1;
+        transform: translateY(0);
+        font-size: 0.7rem;
+    }
+
+    .catalogo-nota {
+        margin-top: 40px;
+    }
+
+    .catalogo-cta {
+        padding: 55px 0;
+    }
+
+}
+
+/* =========================================
+   PÁGINA DE COLECCIONES - Q' CHULA
+========================================= */
+
+.colecciones-hero {
+    padding: 155px 0 85px;
+    text-align: center;
+    background: linear-gradient(135deg, #fffaf7, #f3ecff);
+}
+
+.colecciones-hero .container {
+    max-width: 900px;
+}
+
+.colecciones-hero h1 {
+    max-width: 800px;
+    margin: 15px auto 22px;
+    color: #493b4b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.8rem, 6vw, 4.8rem);
+    font-weight: 600;
+    line-height: 1.05;
+}
+
+.colecciones-hero .section-description {
+    max-width: 650px;
+    margin: 0 auto 28px;
+    color: #756a73;
+    font-size: 0.92rem;
+    line-height: 1.9;
+}
+
+.colecciones-principales {
+    background: #fffdfb;
+}
+
+.colecciones-titulo {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 55px;
+}
+
+.colecciones-titulo h2 {
+    margin: 8px 0 0;
+    color: #493b4b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2rem, 4vw, 3.3rem);
+    font-weight: 600;
+}
+
+.colecciones-titulo > p {
+    max-width: 330px;
+    margin: 0 0 5px;
+    color: #897d86;
+    font-size: 0.83rem;
+    line-height: 1.8;
+}
+
+
+/* Presentación editorial */
+
+.coleccion-editorial {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: clamp(30px, 7vw, 100px);
+    margin-bottom: 95px;
+}
+
+.coleccion-editorial:last-child {
+    margin-bottom: 0;
+}
+
+.coleccion-editorial-invertida .coleccion-editorial-imagen {
+    order: 2;
+}
+
+.coleccion-editorial-invertida .coleccion-editorial-texto {
+    order: 1;
+}
+
+.coleccion-editorial-imagen {
+    position: relative;
+    overflow: hidden;
+    background: #f7f1f3;
+    aspect-ratio: 4 / 4.6;
+}
+
+.coleccion-editorial-imagen img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.coleccion-editorial:hover .coleccion-editorial-imagen img {
+    transform: scale(1.035);
+}
+
+.coleccion-numero {
+    position: absolute;
+    right: 18px;
+    bottom: 12px;
+    color: rgba(255, 255, 255, 0.95);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3.8rem;
+    line-height: 1;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.coleccion-editorial-texto {
+    padding: 20px 0;
+}
+
+.coleccion-etiqueta {
+    margin-bottom: 15px;
+    color: #a08a9c;
+    font-size: 0.67rem;
+    letter-spacing: 0.19em;
+}
+
+.coleccion-editorial-texto h3 {
+    margin: 0 0 8px;
+    color: #493b4b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(3rem, 5vw, 4.8rem);
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.coleccion-frase {
+    margin: 0 0 20px;
+    color: #b17d91;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.45rem;
+    font-style: italic;
+}
+
+.coleccion-descripcion {
+    max-width: 440px;
+    margin-bottom: 28px;
+    color: #756a73;
+    font-size: 0.85rem;
+    line-height: 2;
+}
+
+.coleccion-enlace {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d9bdca;
+    color: #594757;
+    font-size: 0.69rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    transition: color 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.coleccion-enlace:hover {
+    border-color: #c29dec;
+    color: #9a75b9;
+}
+
+.coleccion-enlace span {
+    font-size: 1rem;
+}
+
+
+/* Manifiesto de la marca */
+
+.colecciones-manifiesto {
+    padding: 85px 0;
+    background: #f3ecff;
+}
+
+.colecciones-manifiesto .container {
+    max-width: 850px;
+}
+
+.manifiesto-simbolo {
+    display: block;
+    margin-bottom: 15px;
+    color: #cf9aaf;
+    font-size: 2rem;
+}
+
+.colecciones-manifiesto h2 {
+    max-width: 750px;
+    margin: 12px auto 18px;
+    color: #493b4b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.3rem, 5vw, 3.8rem);
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.manifiesto-descripcion {
+    max-width: 570px;
+    margin: 0 auto 28px;
+    color: #756a73;
+    font-size: 0.9rem;
+    line-height: 1.9;
+}
+
+
+/* Adaptación para móviles */
+
+@media (max-width: 767px) {
+
+    .colecciones-hero {
+        padding: 125px 0 60px;
+    }
+
+    .colecciones-titulo {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 35px;
+    }
+
+    .coleccion-editorial {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-bottom: 60px;
+    }
+
+    .coleccion-editorial-invertida .coleccion-editorial-imagen,
+    .coleccion-editorial-invertida .coleccion-editorial-texto {
+        order: initial;
+    }
+
+    .coleccion-editorial-imagen {
+        aspect-ratio: 4 / 4.2;
+    }
+
+    .coleccion-editorial-texto {
+        padding: 5px 0 0;
+    }
+
+    .coleccion-editorial-texto h3 {
+        font-size: 3.3rem;
+    }
+
+    .colecciones-manifiesto {
+        padding: 60px 0;
+    }
+
+}
+
+/* =========================================
+   HISTORIA Y ESENCIA - Q' CHULA
+========================================= */
+
+.historia-hero {
+    padding: 155px 0 85px;
+    text-align: center;
+    background: linear-gradient(135deg, #fffaf7, #f3ecff);
+}
+
+.historia-hero .container {
+    max-width: 900px;
+}
+
+.historia-hero h1 {
+    margin: 15px auto 22px;
+    color: #493b4b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.8rem, 6vw, 4.8rem);
+    font-weight: 600;
+    line-height: 1.08;
+}
+
+.historia-intro {
+    max-width: 680px;
+    margin: 0 auto 28px;
+    color: #756a73;
+    font-size: 0.93rem;
+    line-height: 1.9;
+}
+
+
+/* Historia */
+
+.historia-seccion {
+    background: #fffdfb;
+}
+
+.historia-imagen {
+    position: relative;
+    overflow: hidden;
+    background: #f7f1f3;
+    aspect-ratio: 4 / 4.7;
+}
+
+.historia-imagen img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.historia-sello {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    left: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 12px;
+    background: rgba(255, 250, 247, 0.91);
+    color: #493b4b;
+    text-align: center;
+}
+
+.historia-sello span {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.1em;
+}
+
+.historia-sello small {
+    margin-top: 3px;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+}
+
+.historia-texto h2 {
+    margin: 10px 0 22px;
+    color: #493b4b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.5rem, 4vw, 3.6rem);
+    font-weight: 500;
+    line-height: 1.12;
+}
+
+.historia-texto > p:not(.section-subtitle) {
+    color: #756a73;
+    font-size: 0.87rem;
+    line-height: 2;
+}
+
+.historia-firma {
+    display: block;
+    margin-top: 25px;
+    color: #b17d91;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+
+/* Significado del nombre */
+
+.historia-nombre {
+    padding: 85px 0;
+    background: #f7edf1;
+}
+
+.historia-nombre h2 {
+    margin: 12px 0 20px;
+    color: #493b4b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    font-weight: 500;
+}
+
+.nombre-destacado {
+    margin-bottom: 20px;
+    color: #a66e88;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.55rem;
+    font-style: italic;
+}
+
+.nombre-descripcion {
+    max-width: 680px;
+    margin: 0 auto 15px;
+    color: #756a73;
+    font-size: 0.88rem;
+    line-height: 1.95;
+}
+
+.nombre-simbolo {
+    display: inline-block;
+    margin-top: 15px;
+    color: #ce9caf;
+    font-size: 2rem;
+}
+
+
+/* Valores */
+
+.historia-valores {
+    background: #fffdfb;
+}
+
+.historia-valores-titulo {
+    max-width: 760px;
+    margin: 0 auto 45px;
+}
+
+.historia-valores-titulo h2 {
+    margin: 10px 0 16px;
+    color: #493b4b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.4rem, 4vw, 3.5rem);
+    font-weight: 500;
+}
+
+.historia-valores-titulo > p:not(.section-subtitle) {
+    color: #756a73;
+    font-size: 0.87rem;
+    line-height: 1.9;
+}
+
+.valor-card {
+    position: relative;
+    height: 100%;
+    padding: 35px 28px;
+    border: 1px solid #eee4e9;
+    background: #fffaf8;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.valor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(87, 63, 79, 0.07);
+}
+
+.valor-numero {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    color: #c6b4c8;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.3rem;
+}
+
+.valor-icono {
+    margin-bottom: 18px;
+    color: #bd8fa5;
+    font-size: 2rem;
+}
+
+.valor-card h3 {
+    margin-bottom: 13px;
+    color: #493b4b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.valor-card p {
+    margin: 0;
+    color: #756a73;
+    font-size: 0.82rem;
+    line-height: 1.9;
+}
+
+
+/* Manifiesto */
+
+.historia-manifiesto {
+    padding: 75px 0;
+    background: #d3f1ed;
+}
+
+.historia-manifiesto h2 {
+    margin-top: 12px;
+    color: #405b56;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.5rem, 4vw, 3.7rem);
+    font-weight: 500;
+    line-height: 1.12;
+}
+
+.historia-manifiesto .row > div:last-child p {
+    color: #526b65;
+    font-size: 0.88rem;
+    line-height: 2;
+}
+
+
+/* Cierre */
+
+.historia-final {
+    padding: 80px 0;
+    background: #f3ecff;
+}
+
+.historia-final .container {
+    max-width: 850px;
+}
+
+.historia-final h2 {
+    margin: 12px 0 18px;
+    color: #493b4b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.historia-final .container > p:not(.section-subtitle) {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    color: #756a73;
+    font-size: 0.88rem;
+    line-height: 1.9;
+}
+
+
+/* Adaptación a celulares */
+
+@media (max-width: 767px) {
+
+    .historia-hero {
+        padding: 125px 0 60px;
+    }
+
+    .historia-nombre {
+        padding: 60px 0;
+    }
+
+    .historia-valores-titulo {
+        margin-bottom: 30px;
+    }
+
+    .valor-card {
+        padding: 30px 24px;
+    }
+
+    .historia-manifiesto,
+    .historia-final {
+        padding: 60px 0;
+    }
+
+}
+
+/* =========================================
+   GALERÍA - Q' CHULA JEWELRY
+========================================= */
+
+.galeria-hero {
+    padding: 155px 0 90px;
+    text-align: center;
+    background: linear-gradient(135deg, #fffaf7 0%, #f3ecff 55%, #d3f1ed 100%);
+}
+
+.galeria-hero .container {
+    max-width: 900px;
+}
+
+.galeria-hero h1 {
+    margin: 16px auto 22px;
+    color: #493b4b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.8rem, 6vw, 4.8rem);
+    font-weight: 500;
+    line-height: 1.08;
+}
+
+.galeria-hero h1 span {
+    color: #ad7d96;
+    font-style: italic;
+}
+
+.galeria-intro {
+    max-width: 630px;
+    margin: 0 auto 28px;
+    color: #756a73;
+    font-size: 0.9rem;
+    line-height: 1.95;
+}
+
+
+/* Contenido principal */
+
+.galeria-seccion {
+    background: #fffdfb;
+}
+
+.galeria-encabezado {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 42px;
+}
+
+.galeria-encabezado h2 {
+    margin: 10px 0 0;
+    color: #493b4b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.3rem, 4vw, 3.5rem);
+    font-weight: 500;
+}
+
+.galeria-nota {
+    max-width: 340px;
+    margin: 0 0 5px;
+    color: #897d86;
+    font-size: 0.82rem;
+    line-height: 1.9;
+}
+
+
+/* Cuadrícula editorial */
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 250px;
+    gap: 18px;
+}
+
+.galeria-item {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    background: #f7edf1;
+    text-align: left;
+    cursor: zoom-in;
+}
+
+.galeria-item-alta {
+    grid-row: span 2;
+}
+
+.galeria-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.65s ease;
+}
+
+.galeria-item:hover img,
+.galeria-item:focus-visible img {
+    transform: scale(1.045);
+}
+
+.galeria-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 24px 20px;
+    background: linear-gradient(
+        to top,
+        rgba(47, 35, 46, 0.72) 0%,
+        rgba(47, 35, 46, 0.18) 42%,
+        transparent 75%
+    );
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.galeria-item:hover .galeria-overlay,
+.galeria-item:focus-visible .galeria-overlay {
+    opacity: 1;
+}
+
+.galeria-caption {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.galeria-caption small {
+    font-size: 0.61rem;
+    letter-spacing: 0.17em;
+}
+
+.galeria-caption strong {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.55rem;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.galeria-ampliar {
+    flex-shrink: 0;
+    font-size: 1.3rem;
+}
+
+.galeria-pie {
+    margin: 28px 0 0;
+    color: #968692;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    text-align: center;
+}
+
+
+/* Frase final */
+
+.galeria-manifiesto {
+    padding: 85px 0;
+    background: #f3ecff;
+}
+
+.galeria-manifiesto .container {
+    max-width: 850px;
+}
+
+.galeria-flor {
+    display: block;
+    margin-bottom: 15px;
+    color: #bd8fa5;
+    font-size: 2rem;
+}
+
+.galeria-manifiesto h2 {
+    margin: 14px auto 28px;
+    color: #493b4b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.galeria-manifiesto h2 span {
+    color: #ad7d96;
+    font-style: italic;
+}
+
+
+/* Visor de imágenes ampliadas */
+
+.galeria-modal[hidden] {
+    display: none !important;
+}
+
+.galeria-modal {
+    position: fixed;
+    z-index: 2000;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 60px 35px 35px;
+    background: rgba(35, 27, 36, 0.94);
+}
+
+.galeria-modal-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: min(850px, 75vw);
+    max-height: 85vh;
+    margin: 0;
+}
+
+.galeria-modal-contenido img {
+    display: block;
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+}
+
+.galeria-modal-contenido figcaption {
+    padding-top: 14px;
+    color: #fffaf7;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.galeria-cerrar,
+.galeria-anterior,
+.galeria-siguiente {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+.galeria-cerrar:hover,
+.galeria-anterior:hover,
+.galeria-siguiente:hover {
+    background: rgba(194, 157, 236, 0.35);
+}
+
+.galeria-cerrar {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    width: 42px;
+    height: 42px;
+    font-size: 1.8rem;
+}
+
+.galeria-anterior,
+.galeria-siguiente {
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+}
+
+
+/* Adaptación para pantallas pequeñas */
+
+@media (max-width: 767px) {
+
+    .galeria-hero {
+        padding: 125px 0 60px;
+    }
+
+    .galeria-encabezado {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 28px;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: 210px;
+        gap: 10px;
+    }
+
+    .galeria-item-alta {
+        grid-row: span 1;
+    }
+
+    .galeria-overlay {
+        padding: 13px 11px;
+        opacity: 1;
+        background: linear-gradient(
+            to top,
+            rgba(47, 35, 46, 0.72),
+            rgba(47, 35, 46, 0.03) 75%
+        );
+    }
+
+    .galeria-caption small {
+        font-size: 0.53rem;
+    }
+
+    .galeria-caption strong {
+        font-size: 1.15rem;
+    }
+
+    .galeria-ampliar {
+        font-size: 1rem;
+    }
+
+    .galeria-manifiesto {
+        padding: 60px 0;
+    }
+
+    .galeria-modal {
+        gap: 8px;
+        padding: 65px 10px 25px;
+    }
+
+    .galeria-modal-contenido {
+        max-width: calc(100vw - 115px);
+    }
+
+    .galeria-modal-contenido img {
+        max-height: 70vh;
+    }
+
+    .galeria-anterior,
+    .galeria-siguiente {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .galeria-cerrar {
+        top: 14px;
+        right: 14px;
+    }
+}
+
+@media (hover: none) {
+    .galeria-overlay {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .galeria-item img,
+    .galeria-overlay {
+        transition: none;
+    }
+}
+
+/* =========================================
+   CONTACTO - Q' CHULA JEWELRY
+========================================= */
+
+.contacto-hero {
+    padding: 155px 0 85px;
+    text-align: center;
+    background: linear-gradient(135deg, #fffaf7, #f7c8ce 130%);
+}
+
+.contacto-hero .container {
+    max-width: 900px;
+}
+
+.contacto-hero h1 {
+    margin: 15px auto 22px;
+    color: #493b4b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.8rem, 6vw, 4.8rem);
+    font-weight: 500;
+    line-height: 1.08;
+}
+
+.contacto-hero h1 span {
+    color: #ad7d96;
+    font-style: italic;
+}
+
+.contacto-intro {
+    max-width: 630px;
+    margin: 0 auto 28px;
+    color: #756a73;
+    font-size: 0.9rem;
+    line-height: 1.95;
+}
+
+
+/* Canales de contacto */
+
+.contacto-canales {
+    background: #fffdfb;
+}
+
+.contacto-titulo {
+    max-width: 760px;
+    margin: 0 auto 42px;
+}
+
+.contacto-titulo h2 {
+    margin: 10px 0 14px;
+    color: #493b4b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.3rem, 4vw, 3.4rem);
+    font-weight: 500;
+}
+
+.contacto-titulo > p:not(.section-subtitle) {
+    color: #756a73;
+    font-size: 0.88rem;
+    line-height: 1.9;
+}
+
+.contacto-card {
+    height: 100%;
+    padding: 35px 28px;
+    border: 1px solid #f0e5e9;
+    background: #fff7f6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(73, 59, 75, 0.07);
+}
+
+.contacto-card-menta {
+    background: #effaf7;
+    border-color: #d3f1ed;
+}
+
+.contacto-card-lavanda {
+    background: #f7f1ff;
+    border-color: #e9ddf8;
+}
+
+.contacto-icono {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #b17d91;
+    font-size: 2rem;
+}
+
+.contacto-card h3 {
+    margin-bottom: 13px;
+    color: #493b4b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.contacto-card p {
+    min-height: 76px;
+    margin-bottom: 20px;
+    color: #756a73;
+    font-size: 0.83rem;
+    line-height: 1.9;
+}
+
+.contacto-enlace {
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #d9bdca;
+    color: #594757;
+    font-size: 0.72rem;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.contacto-enlace:hover {
+    color: #9a75b9;
+}
+
+
+/* Formulario */
+
+.contacto-formulario-seccion {
+    padding: 90px 0;
+    background: #f8f3f6;
+}
+
+.contacto-lateral {
+    padding: 15px 0;
+}
+
+.contacto-lateral h2 {
+    margin: 14px 0 23px;
+    color: #493b4b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.7rem, 4.5vw, 4rem);
+    font-weight: 500;
+    line-height: 1.08;
+}
+
+.contacto-lateral h2 span {
+    color: #ad7d96;
+    font-style: italic;
+}
+
+.contacto-lateral > p:not(.section-subtitle) {
+    max-width: 430px;
+    color: #756a73;
+    font-size: 0.88rem;
+    line-height: 1.95;
+}
+
+.contacto-frase {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 35px;
+    color: #806c7c;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.35rem;
+    font-style: italic;
+}
+
+.contacto-frase span {
+    color: #c29dec;
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+.contacto-decoracion {
+    margin-top: 45px;
+    color: #b49eaf;
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+}
+
+.contacto-form {
+    padding: clamp(25px, 4vw, 45px);
+    border: 1px solid #eee3eb;
+    background: #fffdfb;
+    box-shadow: 0 15px 45px rgba(73, 59, 75, 0.045);
+}
+
+.contacto-form-encabezado {
+    margin-bottom: 28px;
+}
+
+.contacto-form-encabezado h3 {
+    margin: 8px 0 0;
+    color: #493b4b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.3rem;
+    font-weight: 500;
+}
+
+.contacto-form .form-label {
+    margin-bottom: 8px;
+    color: #594757;
+    font-size: 0.76rem;
+    font-weight: 500;
+}
+
+.contacto-form .form-control,
+.contacto-form .form-select {
+    min-height: 48px;
+    border: 1px solid #e9dfe6;
+    border-radius: 0;
+    background-color: #fff;
+    color: #493b4b;
+    font-size: 0.82rem;
+    box-shadow: none;
+}
+
+.contacto-form textarea.form-control {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.contacto-form .form-control::placeholder {
+    color: #b3a6b0;
+}
+
+.contacto-form .form-control:focus,
+.contacto-form .form-select:focus {
+    border-color: #c29dec;
+    box-shadow: 0 0 0 3px rgba(194, 157, 236, 0.15);
+}
+
+.contacto-aviso {
+    margin: 0;
+    color: #897d86;
+    font-size: 0.73rem;
+    line-height: 1.8;
+}
+
+.contacto-boton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 15px;
+    padding: 15px 20px;
+}
+
+.contacto-estado {
+    margin: 0;
+    color: #725a70;
+    font-size: 0.78rem;
+    line-height: 1.7;
+}
+
+
+/* Preguntas frecuentes */
+
+.contacto-preguntas {
+    background: #fffdfb;
+}
+
+.contacto-acordeon {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.contacto-pregunta {
+    border-bottom: 1px solid #eee4e9;
+}
+
+.contacto-pregunta:first-child {
+    border-top: 1px solid #eee4e9;
+}
+
+.contacto-pregunta summary {
+    position: relative;
+    padding: 23px 38px 23px 4px;
+    color: #493b4b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.4;
+    cursor: pointer;
+    list-style: none;
+}
+
+.contacto-pregunta summary::-webkit-details-marker {
+    display: none;
+}
+
+.contacto-pregunta summary::after {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    color: #b17d91;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    transform: translateY(-50%);
+}
+
+.contacto-pregunta[open] summary::after {
+    content: "−";
+}
+
+.contacto-pregunta p {
+    max-width: 720px;
+    margin: 0;
+    padding: 0 35px 24px 4px;
+    color: #756a73;
+    font-size: 0.85rem;
+    line-height: 1.95;
+}
+
+
+/* Cierre */
+
+.contacto-final {
+    padding: 80px 0;
+    background: #d3f1ed;
+}
+
+.contacto-final .container {
+    max-width: 850px;
+}
+
+.contacto-final-simbolo {
+    display: block;
+    margin-bottom: 14px;
+    color: #ad7d96;
+    font-size: 2.2rem;
+}
+
+.contacto-final h2 {
+    margin: 14px 0 20px;
+    color: #405b56;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.6rem, 5vw, 4rem);
+    font-weight: 500;
+    line-height: 1.12;
+}
+
+.contacto-final h2 span {
+    color: #9d7089;
+    font-style: italic;
+}
+
+.contacto-final .container > p:not(.section-subtitle) {
+    max-width: 580px;
+    margin: 0 auto 25px;
+    color: #526b65;
+    font-size: 0.88rem;
+    line-height: 1.9;
+}
+
+
+/* Adaptación móvil */
+
+@media (max-width: 767px) {
+
+    .contacto-hero {
+        padding: 125px 0 60px;
+    }
+
+    .contacto-card p {
+        min-height: auto;
+    }
+
+    .contacto-formulario-seccion {
+        padding: 60px 0;
+    }
+
+    .contacto-lateral {
+        padding-bottom: 10px;
+    }
+
+    .contacto-decoracion {
+        margin-top: 25px;
+    }
+
+    .contacto-form {
+        padding: 25px 20px;
+    }
+
+    .contacto-titulo {
+        margin-bottom: 30px;
+    }
+
+    .contacto-pregunta summary {
+        font-size: 1.2rem;
+    }
+
+    .contacto-final {
+        padding: 60px 0;
+    }
+
+}
+
+/* =========================================
+   MINI CARRITO LATERAL - Q' CHULA
+========================================= */
+
+.mini-carrito-fondo {
+    position: fixed;
+    z-index: 2998;
+    inset: 0;
+    background: rgba(48, 36, 47, 0.42);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mini-carrito-fondo.abierto {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mini-carrito {
+    position: fixed;
+    z-index: 2999;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    width: min(430px, 100%);
+    height: 100%;
+    height: 100dvh;
+    padding: 0;
+    background: #fffdfb;
+    box-shadow: -10px 0 35px rgba(48, 36, 47, 0.12);
+    transform: translateX(105%);
+    visibility: hidden;
+    transition: transform 0.35s ease, visibility 0.35s ease;
+    font-family: "Poppins", sans-serif;
+}
+
+.mini-carrito.abierto {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.mini-carrito-cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 25px 24px;
+    border-bottom: 1px solid #eee4e9;
+}
+
+.mini-carrito-cabecera h2 {
+    margin: 0;
+    color: #493b4b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.mini-carrito-cerrar {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #eadfe7;
+    border-radius: 50%;
+    background: transparent;
+    color: #493b4b;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.mini-carrito-cerrar:hover {
+    background: #f7edf1;
+}
+
+.mini-carrito-mensaje {
+    padding: 14px 24px;
+    background: #effaf7;
+    color: #526b65;
+    font-size: 0.76rem;
+}
+
+.mini-carrito-lista {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px 24px 24px;
+}
+
+.mini-carrito-vacio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 240px;
+    color: #897d86;
+    text-align: center;
+}
+
+.mini-carrito-vacio span {
+    margin-bottom: 12px;
+    color: #c29dec;
+    font-size: 2.5rem;
+}
+
+.mini-carrito-vacio p {
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+.mini-carrito-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 15px;
+    padding: 19px 0;
+    border-bottom: 1px solid #eee4e9;
+}
+
+.mini-carrito-item h3 {
+    margin: 0 0 7px;
+    color: #493b4b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+.mini-carrito-precio {
+    margin: 0;
+    color: #8e6d83;
+    font-size: 0.82rem;
+}
+
+.mini-carrito-eliminar {
+    align-self: start;
+    padding: 5px 0;
+    border: 0;
+    background: transparent;
+    color: #a66e88;
+    font-size: 0.72rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.mini-carrito-pie {
+    padding: 22px 24px;
+    border-top: 1px solid #eee4e9;
+    background: #fffaf8;
+}
+
+.mini-carrito-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 8px;
+    color: #493b4b;
+    font-size: 0.85rem;
+}
+
+.mini-carrito-total strong {
+    font-size: 1.1rem;
+}
+
+.mini-carrito-aclaracion {
+    margin-bottom: 17px;
+    color: #897d86;
+    font-size: 0.7rem;
+}
+
+.mini-carrito-acciones {
+    display: grid;
+    gap: 10px;
+}
+
+.mini-carrito-acciones a {
+    display: block;
+    padding: 13px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.76rem;
+    transition: background 0.25s ease;
+}
+
+.mini-carrito-ver {
+    border: 1px solid #493b4b;
+    background: #493b4b;
+    color: #fff;
+}
+
+.mini-carrito-ver:hover {
+    background: #655066;
+    color: #fff;
+}
+
+.mini-carrito-seguir {
+    border: 1px solid #e5d5e1;
+    background: transparent;
+    color: #594757;
+}
+
+.mini-carrito-seguir:hover {
+    background: #f7edf1;
+}
+
+body.mini-carrito-abierto {
+    overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mini-carrito,
+    .mini-carrito-fondo {
+        transition: none;
+    }
+}
+
+/* =========================================
+   CONTROL DE UNIDADES - MINI CARRITO
+========================================= */
+
+.mini-carrito-item {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+}
+
+.mini-carrito-controles {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.mini-carrito-cantidad {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e9dfe6;
+    background: #fff;
+}
+
+.mini-carrito-cantidad button {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    background: transparent;
+    color: #594757;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.mini-carrito-cantidad button:hover {
+    background: #f7edf1;
+}
+
+.mini-carrito-cantidad button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.mini-carrito-cantidad span {
+    min-width: 27px;
+    color: #493b4b;
+    font-size: 0.78rem;
+    text-align: center;
+}
+
+.mini-carrito-subtotal-producto {
+    margin: 8px 0 0;
+    color: #493b4b;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.mini-carrito-eliminar {
+    align-self: center;
+}
+
+@media (max-width: 380px) {
+    .mini-carrito-cabecera {
+        padding: 20px 16px;
+    }
+
+    .mini-carrito-lista {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .mini-carrito-pie {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .mini-carrito-cantidad button {
+        width: 29px;
+        height: 30px;
+    }
+}
+
+/* BOTÓN FLOTANTE DE WHATSAPP - Q' CHULA */
+
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 20px;
+  border-radius: 30px;
+  background: #25D366;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+  color: #ffffff;
+}
+
+@media (max-width: 576px) {
+  .whatsapp-float {
+    right: 15px;
+    bottom: 15px;
+    padding: 11px 16px;
+    font-size: 13px;
+  }
+}
+
+/* =====================================================
+   Q' CHULA ACCESORIOS
+   Estilos completos de la página productos.html
+   Archivo: css/productos.css
+===================================================== */
+
+/* ---------- 1. PALETA DE COLORES ---------- */
+
+:root {
+  --qc-menta: #D3F1ED;
+  --qc-rosa: #F7C8CE;
+  --qc-lavanda: #C29DEC;
+
+  --qc-texto: #403543;
+  --qc-secundario: #776d79;
+  --qc-blanco: #ffffff;
+  --qc-fondo: #fffdfd;
+  --qc-borde: #eee4ef;
+
+  --qc-lavanda-oscura: #9b70c1;
+  --qc-sombra: 0 8px 25px rgba(65, 43, 70, 0.08);
+  --qc-sombra-hover: 0 16px 35px rgba(65, 43, 70, 0.14);
+
+  --qc-radio: 16px;
+  --qc-transicion: 0.3s ease;
+}
+
+/* ---------- 2. CONFIGURACIÓN GENERAL ---------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--qc-texto);
+  background-color: var(--qc-fondo);
+  font-family: "Poppins", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  transition: color var(--qc-transicion);
+}
+
+/* ---------- 3. BARRA DE NAVEGACIÓN ---------- */
+
+.navbar {
+  padding: 12px 0;
+  background-color: rgba(255, 255, 255, 0.97) !important;
+  backdrop-filter: blur(12px);
+}
+
+.navbar .container {
+  gap: 15px;
+}
+
+.marca-qchula,
+.navbar-brand {
+  color: var(--qc-texto) !important;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.marca-qchula small {
+  display: block;
+  margin-top: 6px;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 0.57rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+}
+
+.navbar-nav {
+  align-items: center;
+  gap: 4px;
+}
+
+.navbar .nav-link {
+  position: relative;
+  padding: 10px 12px !important;
+  color: var(--qc-texto) !important;
+  font-size: 0.84rem;
+  font-weight: 400;
+}
+
+.navbar .nav-link::after {
+  position: absolute;
+  right: 12px;
+  bottom: 4px;
+  left: 12px;
+  height: 2px;
+  background-color: var(--qc-lavanda);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--qc-transicion);
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--qc-lavanda-oscura) !important;
+}
+
+.navbar-toggler {
+  border-color: var(--qc-borde);
+  border-radius: 10px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(194, 157, 236, 0.25);
+}
+
+/* ---------- 4. CONTENEDOR DEL CATÁLOGO ---------- */
+
+.catalogo-pagina {
+  min-height: 70vh;
+  padding: 145px 0 80px;
+  overflow: hidden;
+}
+
+.catalogo-pagina > .container {
+  max-width: 1240px;
+}
+
+/* ---------- 5. ENCABEZADO ---------- */
+
+.catalogo-encabezado {
+  max-width: 760px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.catalogo-etiqueta {
+  margin-bottom: 12px;
+  color: var(--qc-lavanda-oscura);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+}
+
+.catalogo-encabezado h1 {
+  margin: 0 0 15px;
+  color: var(--qc-texto);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-weight: 600;
+  line-height: 1.12;
+}
+
+.catalogo-encabezado > p:last-child {
+  max-width: 580px;
+  margin: 0 auto;
+  color: var(--qc-secundario);
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+/* ---------- 6. FILTROS DE CATEGORÍAS ---------- */
+
+.filtros-catalogo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto 28px;
+}
+
+.filtro-btn {
+  padding: 10px 20px;
+  border: 1px solid var(--qc-lavanda);
+  border-radius: 30px;
+  background-color: transparent;
+  color: var(--qc-texto);
+  font-size: 0.83rem;
+  cursor: pointer;
+  transition:
+    background-color var(--qc-transicion),
+    color var(--qc-transicion),
+    border-color var(--qc-transicion),
+    transform var(--qc-transicion);
+}
+
+.filtro-btn:hover {
+  border-color: var(--qc-rosa);
+  background-color: var(--qc-menta);
+  transform: translateY(-2px);
+}
+
+.filtro-btn.active {
+  border-color: var(--qc-lavanda);
+  background-color: var(--qc-lavanda);
+  color: #ffffff;
+}
+
+.filtro-btn:focus-visible {
+  outline: 3px solid var(--qc-rosa);
+  outline-offset: 3px;
+}
+
+/* Oculta los productos que no pertenecen al filtro seleccionado */
+
+.producto-catalogo[hidden] {
+  display: none !important;
+}
+
+/* ---------- 7. CONTADOR DE PRODUCTOS ---------- */
+
+.contador-catalogo {
+  margin: 0 0 28px;
+  color: var(--qc-secundario);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* ---------- 8. TARJETAS DE PRODUCTOS ---------- */
+
+.producto-catalogo {
+  animation: aparecer-producto 0.45s ease both;
+}
+
+.producto-card {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--qc-borde);
+  border-radius: var(--qc-radio);
+  background-color: var(--qc-blanco);
+  box-shadow: var(--qc-sombra);
+  transition:
+    transform var(--qc-transicion),
+    box-shadow var(--qc-transicion),
+    border-color var(--qc-transicion);
+}
+
+.producto-card:hover {
+  border-color: #e1ccef;
+  box-shadow: var(--qc-sombra-hover);
+  transform: translateY(-6px);
+}
+
+/* ---------- 9. FOTOGRAFÍAS ---------- */
+
+.producto-card img {
+  display: block;
+  width: 100%;
+  height: 310px;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: center;
+  background-color: #f8f1f8;
+  transition: transform 0.55s ease;
+}
+
+.producto-card:hover img {
+  transform: scale(1.035);
+}
+
+/* ---------- 10. INFORMACIÓN DEL PRODUCTO ---------- */
+
+.producto-info {
+  display: flex;
+  min-height: 225px;
+  flex: 1;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 22px;
+}
+
+.producto-info h2,
+.producto-info h3 {
+  margin: 0 0 10px;
+  color: var(--qc-texto);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.producto-info > p:not(.producto-precio) {
+  flex-grow: 1;
+  margin: 0 0 12px;
+  color: var(--qc-secundario);
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+
+/* ---------- 11. PRECIOS ---------- */
+
+.producto-precio {
+  display: block;
+  margin: 7px 0 18px;
+  color: var(--qc-lavanda-oscura);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* ---------- 12. BOTÓN AGREGAR AL CARRITO ---------- */
+
+.btn-qchula {
+  display: inline-flex;
+  width: 100%;
+  min-height: 45px;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1px solid var(--qc-lavanda);
+  border-radius: 30px;
+  background-color: var(--qc-lavanda);
+  color: #ffffff;
+  font-size: 0.83rem;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    background-color var(--qc-transicion),
+    border-color var(--qc-transicion),
+    color var(--qc-transicion),
+    transform var(--qc-transicion),
+    box-shadow var(--qc-transicion);
+}
+
+.btn-qchula:hover {
+  border-color: var(--qc-lavanda-oscura);
+  background-color: var(--qc-lavanda-oscura);
+  color: #ffffff;
+  box-shadow: 0 5px 15px rgba(155, 112, 193, 0.22);
+  transform: translateY(-2px);
+}
+
+.btn-qchula:active {
+  transform: translateY(0);
+}
+
+.btn-qchula:focus-visible {
+  outline: 3px solid var(--qc-rosa);
+  outline-offset: 3px;
+}
+
+/* ---------- 13. PIE DE PÁGINA ---------- */
+
+.pie-qchula {
+  padding: 38px 15px;
+  border-top: 1px solid var(--qc-borde);
+  background-color: #fbf6fc;
+  text-align: center;
+}
+
+.pie-qchula p {
+  margin: 5px 0;
+  color: var(--qc-secundario);
+  font-size: 0.88rem;
+}
+
+.pie-qchula p:first-child {
+  color: var(--qc-texto);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* ---------- 14. ANIMACIONES ---------- */
+
+@keyframes aparecer-producto {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- 15. TABLETAS ---------- */
+
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    align-items: stretch;
+    padding-top: 12px;
+  }
+
+  .navbar .nav-link {
+    padding: 10px 4px !important;
+  }
+
+  .navbar .nav-link::after {
+    right: auto;
+    left: 4px;
+    width: 45px;
+  }
+
+  .catalogo-pagina {
+    padding-top: 125px;
+  }
+
+  .producto-card img {
+    height: 285px;
+  }
+}
+
+/* ---------- 16. CELULARES ---------- */
+
+@media (max-width: 767.98px) {
+  .catalogo-pagina {
+    padding: 115px 0 55px;
+  }
+
+  .catalogo-encabezado {
+    margin-bottom: 30px;
+  }
+
+  .catalogo-encabezado h1 {
+    font-size: 2.8rem;
+  }
+
+  .catalogo-encabezado > p:last-child {
+    padding: 0 10px;
+    font-size: 0.88rem;
+  }
+
+  .filtros-catalogo {
+    gap: 8px;
+    margin-bottom: 22px;
+  }
+
+  .filtro-btn {
+    padding: 9px 14px;
+    font-size: 0.78rem;
+  }
+
+  .producto-card img {
+    height: 260px;
+  }
+
+  .producto-info {
+    min-height: 220px;
+    padding: 17px;
+  }
+
+  .producto-info h2,
+  .producto-info h3 {
+    font-size: 1.4rem;
+  }
+}
+
+/* ---------- 17. CELULARES PEQUEÑOS ---------- */
+
+@media (max-width: 420px) {
+  .catalogo-pagina {
+    padding-top: 105px;
+  }
+
+  .catalogo-encabezado h1 {
+    font-size: 2.35rem;
+  }
+
+  .catalogo-etiqueta {
+    font-size: 0.66rem;
+    letter-spacing: 0.15em;
+  }
+
+  .filtros-catalogo {
+    gap: 7px;
+  }
+
+  .filtro-btn {
+    padding: 8px 11px;
+    font-size: 0.74rem;
+  }
+
+  .producto-card img {
+    height: 225px;
+  }
+
+  .producto-info {
+    min-height: 215px;
+    padding: 14px;
+  }
+
+  .producto-info h2,
+  .producto-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .producto-info > p:not(.producto-precio) {
+    font-size: 0.82rem;
+  }
+
+  .btn-qchula {
+    padding: 11px 10px;
+    font-size: 0.78rem;
+  }
+}
+
+/* ---------- 18. ACCESIBILIDAD ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* CONFIRMACIÓN ELEGANTE PARA VACIAR EL CARRITO */
+
+.qchula-confirmacion-fondo {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(42, 30, 43, 0.55);
+    backdrop-filter: blur(5px);
+}
+
+.qchula-confirmacion {
+    width: 100%;
+    max-width: 440px;
+    padding: 36px 28px;
+    border-radius: 22px;
+    background: #fffafc;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(40, 25, 45, 0.2);
+    animation: qchulaAparecer 0.25s ease;
+}
+
+.qchula-confirmacion-icono {
+    display: block;
+    color: #c29dec;
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.qchula-confirmacion h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    color: #392b3d;
+    margin-bottom: 12px;
+}
+
+.qchula-confirmacion p {
+    color: #756777;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.qchula-confirmacion-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.qchula-confirmacion-botones button {
+    width: 100%;
+    padding: 13px 18px;
+    border-radius: 30px;
+    font: inherit;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.qchula-confirmacion-botones button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.qchula-btn-cancelar {
+    background: #d3f1ed;
+    color: #392b3d;
+    border: 1px solid #b5ded7;
+}
+
+.qchula-btn-confirmar {
+    background: #f7c8ce;
+    color: #392b3d;
+    border: 1px solid #f0b5bf;
+}
+
+@keyframes qchulaAparecer {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 480px) {
+    .qchula-confirmacion {
+        padding: 28px 20px;
+    }
+
+    .qchula-confirmacion h2 {
+        font-size: 26px;
+    }
+}
+
+
+
+
+
+
+
