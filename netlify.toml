@@ -1,0 +1,17 @@
+# Las páginas piden css/, js/ e img/. Si los archivos se suben sueltos a la raíz
+# (por ejemplo con "Add files via upload" en GitHub), estas reglas los sirven igual.
+# No son forzadas: si el archivo existe dentro de la carpeta, se usa ese.
+[[redirects]]
+  from = "/css/*"
+  to = "/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/js/*"
+  to = "/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/img/*"
+  to = "/:splat"
+  status = 200
