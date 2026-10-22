@@ -1,10 +1,3 @@
-
-/* =====================================================
-   Q'CHULA JEWELRY
-   Carrito, catálogo, WhatsApp y detalles visuales
-   ===================================================== */
-
-
 /* 1. CONFIGURACIÓN GENERAL */
 
 const WHATSAPP_QCHULA = "573227495239";
